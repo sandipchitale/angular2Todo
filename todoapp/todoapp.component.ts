@@ -4,7 +4,7 @@ import {NgClass} from 'angular2/common';
 
 @Component({
   selector: 'todo-item',
-  template: '<input type="checkbox" [(ngModel)]="todo.done">&nbsp;<span [ngClass]="{strikethru: todo.done}">{{todo.what}} </span>',
+  template: '<input type="checkbox" [(ngModel)]="todo.done">&nbsp;&nbsp;<span [ngClass]="{strikethru: todo.done}">{{todo.what}}</span>',
   directives: [NgClass],
   styles: [`
     .strikethru {
@@ -23,10 +23,10 @@ class TodoItem {
 })
 class TodoList {
     todos = [];
-    todo = 'Do ';
+    todo = '';
     addTodo = function(todo) {
             this.todos.push({done: false, what: todo});
-            this.todo = 'Do ';
+            this.todo = '';
             return false;
         };
 }
