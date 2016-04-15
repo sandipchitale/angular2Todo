@@ -37,14 +37,8 @@ class TodoList {
     directives: [TodoList]
 })
 export class TodoAppComponent {
-		who = 'mundo';
 
 		constructor(public elementRef: ElementRef) {
       var native = this.elementRef.nativeElement;
-      this.who = native.getAttribute("who");
     }
-
-		helloWho() {
-			alert('Hello there ' + this.who);
-		}
 }

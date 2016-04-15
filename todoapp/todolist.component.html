@@ -1,4 +1,7 @@
-
-<div *ngFor="#todo of todos"><todo-item [todo]="todo"></todo-item></div>
-<hr/>
-<input [(ngModel)]="todo">&nbsp;&nbsp;<button (click)="addTodo(todo)" >Add</button>
+<div class="container">
+	<div class="row">
+		<div *ngFor="#todo of todos"><todo-item [todo]="todo"></todo-item></div>
+		<hr/>
+		<input [(ngModel)]="todo">&nbsp;&nbsp;<button (click)="addTodo(todo)" ><i class="glyphicon glyphicon-plus"></i></button>
+	</div>
+</div>
