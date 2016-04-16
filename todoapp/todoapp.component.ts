@@ -4,7 +4,7 @@ import {NgClass} from 'angular2/common';
 
 @Component({
   selector: 'todo-item',
-  template: '<input type="checkbox" [(ngModel)]="todo.done">&nbsp;&nbsp;<span [ngClass]="{strikethru: todo.done}">{{todo.what}}</span>',
+  templateUrl: 'todoapp/todoitem.component.html',
   directives: [NgClass],
   styles: [`
     .strikethru {
